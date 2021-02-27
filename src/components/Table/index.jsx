@@ -1,7 +1,18 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
+import api from '../../utils/api';
 
-export default function index({ rows = [], columns = [] }) {
+export default function index({ rows = [], columns = [], setRows }) {
+  const deletarUsuario = async (id) => {
+    try {
+      await api.delete(`/user/${id}`);
+      const novaTabela = rows.filter((row) => row.id !== id);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <Table>
       <thead>
@@ -21,6 +32,8 @@ export default function index({ rows = [], columns = [] }) {
                   : row[column.name]}
               </td>
             ))}
+            <Button className="mr-2">Editar</Button>
+            <Button variant="danger" onClick={() => deletarUsuario(row.id)}>Deletar Usuário</Button>
           </tr>
         ))}
       </tbody>

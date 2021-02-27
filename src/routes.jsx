@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Todo from './pages/Todo';
+import User from './pages/User';
 
 const routes = [{
   component: Home,
@@ -13,7 +14,13 @@ const routes = [{
   component: Todo,
   name: 'Todo',
   path: '/todo',
-}];
+},
+{
+  component: User,
+  name: 'Formulário',
+  path: '/create',
+},
+];
 
 const Routes = () => (
   <BrowserRouter>

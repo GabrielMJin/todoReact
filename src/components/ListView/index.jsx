@@ -15,7 +15,7 @@ const ListView = ({ columns, endpoint }) => {
   }, []);
 
   return (
-    <Table columns={columns} rows={rows} />
+    <Table setRows={setRows} columns={columns} rows={rows} />
   );
 };
 

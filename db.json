@@ -13,9 +13,14 @@
   ],
   "user": [
     {
-      "id": 1,
-      "name": "Keven Leone",
-      "email": "keven.santos.sz@gmail.com"
+      "name": "Carlos Rogner",
+      "email": "carlinhos.daMassa@hotmail.com",
+      "id": 3
+    },
+    {
+      "name": "Diego Saggioro",
+      "email": "DieguinhoDozap@yahoo.com.br",
+      "id": 4
     }
   ],
   "todos": [

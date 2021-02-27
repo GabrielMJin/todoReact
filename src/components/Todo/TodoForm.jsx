@@ -1,3 +1,5 @@
+/* eslint-disable no-alert */
+/* eslint-disable linebreak-style */
 import React, { useState } from 'react';
 import {
   Row, Form, Col, Button,
